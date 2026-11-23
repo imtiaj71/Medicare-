@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MediCare — order genuine medicines online in Bangladesh. Search medicines, upload prescriptions, and pay securely." />
+  <title>MediCare | Your Health, Our Priority</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#0b3b68; --blue:#0877c9; --pale:#edf6fc; --cream:#fbfaf6; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, sans-serif; background: var(--cream); color: #12385d; }
+    .brand-gradient { background: linear-gradient(135deg,#0b3b68,#0877c9); }
+    .hero-bg { background: radial-gradient(circle at 85% 25%, #d8edfb 0, transparent 32%), linear-gradient(110deg,#fbfaf6 0%,#f7fbfd 56%,#e4f3fc 100%); }
+    .soft-shadow { box-shadow: 0 12px 34px rgba(11,59,104,.08); }
+    .category-card { transition: transform .2s ease, box-shadow .2s ease; }
+    .category-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(11,59,104,.12); }
+    .icon-circle { background: #e0f0fc; color: #0877c9; }
+    .payment-logo { border-right: 1px solid #b8d7ef; }
+    .payment-logo:last-child { border-right: 0; }
+    .nav-link { transition: color .2s ease; }
+    .nav-link:hover { color: #0877c9; }
+    @media (max-width: 640px) { .payment-logo:nth-child(4) { border-right: 0; } }
+  </style>
+</head>
+<body>
+  <!-- Top strip -->
+  <div class="brand-gradient text-white text-xs sm:text-sm">
+    <div class="mx-auto max-w-7xl px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+      <p class="flex items-center gap-2"><span aria-hidden="true">✓</span> 100% Genuine Medicine <span class="opacity-60">|</span> Fast &amp; Reliable Delivery Across Bangladesh</p>
+      <div class="flex gap-4"><a href="#track" class="hover:underline">Track Order</a><a href="#support" class="hover:underline">Help</a><a href="#support" class="hover:underline">Contact</a></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-blue-100">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-4">
+      <a href="#" class="flex items-center gap-2 shrink-0" aria-label="MediCare home">
+        <span class="brand-gradient rounded-2xl h-11 w-11 flex items-center justify-center text-white text-2xl font-extrabold">✚</span>
+        <span><span class="block text-xl sm:text-2xl font-extrabold tracking-tight text-[#0b3b68]">MediCare</span><span class="block -mt-1 text-[10px] sm:text-xs">Your Health, Our Priority</span></span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold">
+        <a class="nav-link text-[#0877c9]" href="#">Home</a><a class="nav-link" href="#categories">Shop</a><a class="nav-link" href="#prescription">Upload Prescription</a><a class="nav-link" href="#why-us">About</a><a class="nav-link" href="#faqs">FAQs</a><a class="nav-link" href="#support">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="mobileSearchBtn" class="lg:hidden rounded-full border border-blue-100 p-2" aria-label="Go to medicine search">⌕</button>
+        <a href="#search" class="hidden sm:inline-flex rounded-full border border-blue-100 px-3 py-2 text-sm font-semibold hover:bg-blue-50">⌕ <span class="ml-1">Search</span></a>
+        <button id="cartBtn" class="relative rounded-full border border-blue-100 px-3 py-2 text-sm font-semibold hover:bg-blue-50" aria-label="View cart">🛒 <span id="cartCount" class="ml-1 inline-flex items-center justify-center rounded-full bg-[#0877c9] text-white text-[10px] h-5 min-w-5 px-1">0</span></button>
+        <a href="#support" class="hidden sm:inline-flex brand-gradient text-white rounded-full px-4 py-2 text-sm font-semibold hover:opacity-90">Login / Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-bg overflow-hidden">
+      <div class="mx-auto max-w-7xl px-4 py-12 md:py-16 grid md:grid-cols-2 items-center gap-10">
+        <div class="relative z-10">
+          <span class="inline-flex items-center gap-2 rounded-full bg-blue-100 text-[#075b9a] px-3 py-1.5 text-xs font-bold mb-5"><span>✦</span> YOUR TRUSTED ONLINE PHARMACY</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] font-extrabold tracking-tight text-[#0b3b68]">Order Medicines<br class="hidden sm:block"> Online, <span class="text-[#0877c9]">Stress-Free!</span></h1>
+          <p class="mt-5 max-w-xl text-base sm:text-lg leading-7 text-slate-600">Get genuine medicines delivered to your door. Search by medicine name, upload your prescription, and order in just a few clicks.</p>
+          <ul class="mt-6 space-y-3 text-sm sm:text-base font-semibold">
+            <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-[#0877c9] text-white text-sm">✓</span> 100% genuine and quality-checked medicines</li>
+            <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-[#0877c9] text-white text-sm">✓</span> Fast delivery across Bangladesh</li>
+            <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-[#0877c9] text-white text-sm">✓</span> Flexible and secure payment options</li>
+          </ul>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#search" class="brand-gradient rounded-full px-6 py-3.5 text-white font-bold shadow-lg shadow-blue-900/15 hover:opacity-90">Start Shopping <span class="ml-2">→</span></a>
+            <a href="#prescription" class="rounded-full border border-[#b7d7ee] bg-white px-6 py-3.5 font-bold hover:bg-blue-50">Upload Prescription ↑</a>
+          </div>
+          <div class="mt-7 flex items-center gap-3 text-sm text-slate-600"><span class="flex -space-x-2"><span class="h-8 w-8 rounded-full bg-blue-200 border-2 border-white flex items-center justify-center">👨</span><span class="h-8 w-8 rounded-full bg-sky-100 border-2 border-white flex items-center justify-center">👩</span><span class="h-8 w-8 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">👨‍⚕️</span></span><span><b class="text-[#0b3b68]">Care you can count on</b><br>Here for your family's health</span></div>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-blue-200/70 to-white/20 rotate-3"></div>
+          <div class="relative rounded-[2rem] overflow-hidden border border-white shadow-2xl min-h-[340px] sm:min-h-[440px] bg-gradient-to-br from-[#cce8f8] via-[#f6fbfe] to-[#a8d8f2]">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1100&q=85" alt="Healthcare professional ready to help" class="absolute inset-0 h-full w-full object-cover object-center" onerror="this.style.display='none'">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0b3b68]/75 via-[#0b3b68]/5 to-transparent"></div>
+            <div class="absolute left-5 right-5 bottom-5 sm:left-7 sm:right-7 sm:bottom-7 rounded-2xl bg-white/95 backdrop-blur p-4 sm:p-5 soft-shadow">
+              <div class="flex items-center gap-3">
+                <div class="h-12 w-12 shrink-0 rounded-xl brand-gradient text-white flex items-center justify-center text-2xl">✚</div>
+                <div class="flex-1"><p class="font-extrabold text-[#0b3b68]">Your health, delivered.</p><p class="text-xs sm:text-sm text-slate-500">Convenient care, right at your doorstep.</p></div>
+                <span class="text-2xl" aria-hidden="true">💙</span>
+              </div>
+            </div>
+            <div class="absolute top-5 left-5 rounded-xl bg-white/95 px-3 py-2 text-xs font-bold text-[#0b3b68] shadow"><span class="text-green-600">●</span> Trusted pharmacy care</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="mx-auto max-w-7xl px-4 -mt-2 relative z-10">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 rounded-2xl border border-blue-100 bg-white p-4 sm:p-5 soft-shadow">
+        <div class="flex items-center gap-3 p-2"><span class="text-3xl text-[#0877c9]">🛡</span><div><p class="font-bold text-sm sm:text-base">Genuine Medicine</p><p class="text-xs sm:text-sm text-slate-500">Quality assured</p></div></div>
+        <div class="flex items-center gap-3 p-2"><span class="text-3xl text-[#0877c9]">🚚</span><div><p class="font-bold text-sm sm:text-base">Fast Delivery</p><p class="text-xs sm:text-sm text-slate-500">Nationwide service</p></div></div>
+        <div class="flex items-center gap-3 p-2"><span class="text-3xl text-[#0877c9]">🎧</span><div><p class="font-bold text-sm sm:text-base">Helpful Support</p><p class="text-xs sm:text-sm text-slate-500">We're here for you</p></div></div>
+        <div class="flex items-center gap-3 p-2"><span class="text-3xl text-[#0877c9]">🔒</span><div><p class="font-bold text-sm sm:text-base">Secure Payments</p><p class="text-xs sm:text-sm text-slate-500">Multiple ways to pay</p></div></div>
+      </div>
+    </section>
+
+    <!-- Search and upload -->
+    <section id="search" class="mx-auto max-w-7xl px-4 py-14">
+      <div class="text-center mb-7"><p class="text-sm font-bold uppercase tracking-[.18em] text-[#0877c9]">Let's find what you need</p><h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-[#0b3b68]">Find Your Medicine</h2><p class="mt-2 text-slate-500">Search medicine names or upload a prescription for assistance.</p></div>
+      <div class="grid lg:grid-cols-2 gap-5">
+        <form id="searchForm" class="rounded-2xl border border-blue-100 bg-white p-5 sm:p-7 soft-shadow">
+          <label for="medicineSearch" class="block font-bold mb-3">Search by medicine name</label>
+          <div class="flex gap-2">
+            <div class="relative flex-1"><span class="absolute left-4 top-1/2 -translate-y-1/2 text-xl text-[#0877c9]">⌕</span><input id="medicineSearch" class="w-full rounded-xl border border-slate-200 bg-[#fbfdff] py-3.5 pl-11 pr-3 outline-none focus:border-[#0877c9] focus:ring-4 focus:ring-blue-100" placeholder="e.g. Paracetamol, ORS..." /></div>
+            <button class="brand-gradient rounded-xl px-5 sm:px-7 font-bold text-white hover:opacity-90" type="submit">Search</button>
+          </div>
+          <p class="mt-3 text-xs text-slate-500">Tip: enter the brand or generic name printed on the medicine pack.</p>
+          <div id="searchMessage" class="hidden mt-4 rounded-xl bg-blue-50 p-3 text-sm text-[#0b3b68]" role="status"></div>
+        </form>
+        <form id="prescription" class="rounded-2xl border border-dashed border-[#8bbce0] bg-[#f3f9fd] p-5 sm:p-7">
+          <div class="flex items-start gap-4">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-2xl text-[#0877c9] shadow-sm">☁↑</span>
+            <div class="flex-1"><h3 class="font-extrabold text-lg">Upload Prescription</h3><p class="mt-1 text-sm text-slate-500">Upload a clear image or PDF and our pharmacy team will help you.</p></div>
+          </div>
+          <label for="prescriptionFile" class="mt-5 flex cursor-pointer flex-col items-center justify-center rounded-xl border border-blue-200 bg-white px-4 py-5 text-center hover:bg-blue-50">
+            <span class="text-2xl">📄</span><span class="mt-2 font-bold text-[#0b3b68]">Choose prescription file</span><span class="mt-1 text-xs text-slate-500">JPG, PNG or PDF · Max 10 MB</span>
+            <input id="prescriptionFile" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" class="sr-only" />
+          </label>
+          <div class="mt-3 flex items-center justify-between gap-3"><p id="fileName" class="text-xs text-slate-500">No file selected</p><button type="submit" class="brand-gradient rounded-xl px-5 py-3 font-bold text-white hover:opacity-90">Continue →</button></div>
+          <p class="mt-3 text-xs text-slate-500">Prescription upload is a demo here; files are not sent to a server.</p>
+          <div id="uploadMessage" class="hidden mt-3 rounded-xl bg-white p-3 text-sm text-[#0b3b68]" role="status"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Payments -->
+    <section class="mx-auto max-w-7xl px-4 pb-14">
+      <div class="rounded-3xl bg-gradient-to-r from-[#eaf5fc] to-[#f5faff] border border-blue-100 p-5 sm:p-8">
+        <div class="text-center"><h2 class="text-2xl font-extrabold text-[#0b3b68]">Flexible Payment Options</h2><p class="mt-1 text-sm text-slate-500">Choose a convenient way to pay at checkout.</p></div>
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 sm:gap-0 text-center">
+          <div class="payment-logo flex items-center justify-center py-3 font-extrabold text-2xl text-pink-600">bKash</div>
+          <div class="payment-logo flex items-center justify-center py-3 font-extrabold text-xl text-purple-700">Rocket</div>
+          <div class="payment-logo flex items-center justify-center py-3 font-extrabold text-2xl text-orange-600">নগদ</div>
+          <div class="payment-logo flex items-center justify-center py-3 font-extrabold text-2xl text-sky-600">upay</div>
+          <div class="payment-logo flex items-center justify-center py-3 font-extrabold text-2xl italic text-blue-700">VISA</div>
+          <div class="payment-logo flex items-center justify-center py-3 font-extrabold text-xl text-[#0b3b68]">◉ NPSB</div>
+          <div class="flex items-center justify-center py-3 font-bold text-sm text-[#0b3b68]">💵 Cash on Delivery</div>
+        </div>
+        <p class="mt-4 text-center text-xs text-slate-500">Payment methods shown for preview. Connect an approved payment gateway before accepting real payments.</p>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="mx-auto max-w-7xl px-4 pb-14">
+      <div class="text-center mb-8"><h2 class="text-3xl font-extrabold text-[#0b3b68]">Browse Medicine Categories</h2><p class="mt-2 text-slate-500">Find products by the type of care you need.</p></div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
+        <button class="category-card rounded-2xl border border-blue-100 bg-white p-4 text-center" data-category="Pain Relief & Fever"><span class="icon-circle mx-auto flex h-14 w-14 items-center justify-center rounded-2xl text-3xl">💊</span><span class="mt-3 block text-sm font-bold">Pain Relief<br>&amp; Fever</span></button>
+        <button class="category-card rounded-2xl border border-blue-100 bg-white p-4 text-center" data-category="Cold & Cough"><span class="icon-circle mx-auto flex h-14 w-14 items-center justify-center rounded-2xl text-3xl">🤧</span><span class="mt-3 block text-sm font-bold">Cold &amp; Cough</span></button>
+        <button class="category-card rounded-2xl border border-blue-100 bg-white p-4 text-center" data-category="Digestive Care"><span class="icon-circle mx-auto flex h-14 w-14 items-center justify-center rounded-2xl text-3xl">🫗</span><span class="mt-3 block text-sm font-bold">Digestive Care</span></button>
+        <button class="category-card rounded-2xl border border-blue-100 bg-white p-4 text-center" data-category="Diabetes Care"><span class="icon-circle mx-auto flex h-14 w-14 items-center justify-center rounded-2xl text-3xl">🩺</span><span class="mt-3 block text-sm font-bold">Diabetes Care</span></button>
+        <button class="category-card rounded-2xl border border-blue-100 bg-white p-4 text-center" data-category="Heart Care"><span class="icon-circle mx-auto flex h-14 w-14 items-center justify-center rounded-2xl text-3xl">💗</span><span class="mt-3 block text-sm font-bold">Heart Care</span></button>
+        <button class="category-card rounded-2xl border border-blue-100 bg-white p-4 text-center" data-category="Vitamins & Supplements"><span class="icon-circle mx-auto flex h-14 w-14 items-center justify-center rounded-2xl text-3xl">🧴</span><span class="mt-3 block text-sm font-bold">Vitamins &amp;<br>Supplements</span></button>
+        <button class="category-card rounded-2xl border border-[#0b3b68] bg-[#0b3b68] p-4 text-center text-white" data-category="All Categories"><span class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-3xl">▦</span><span class="mt-3 block text-sm font-bold">View All<br>Categories →</span></button>
+      </div>
+      <div id="categoryMessage" class="hidden mt-4 rounded-xl border border-blue-100 bg-white p-4 text-sm" role="status"></div>
+    </section>
+
+    <!-- Why us + testimonial -->
+    <section id="why-us" class="mx-auto max-w-7xl px-4 pb-14 grid lg:grid-cols-2 gap-5">
+      <div class="rounded-3xl bg-[#eaf5fc] p-6 sm:p-8 border border-blue-100">
+        <span class="text-xs font-bold uppercase tracking-[.18em] text-[#0877c9]">Why choose us</span><h2 class="mt-2 text-2xl sm:text-3xl font-extrabold text-[#0b3b68]">Care you can trust</h2>
+        <ul class="mt-6 space-y-4 text-sm sm:text-base"><li class="flex gap-3"><span class="text-[#0877c9] font-extrabold">✓</span> Genuine and quality-assured medicines</li><li class="flex gap-3"><span class="text-[#0877c9] font-extrabold">✓</span> Convenient ordering from home</li><li class="flex gap-3"><span class="text-[#0877c9] font-extrabold">✓</span> Clear pricing and secure checkout</li><li class="flex gap-3"><span class="text-[#0877c9] font-extrabold">✓</span> Friendly customer support</li></ul>
+        <div class="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-[#0b3b68]">🛡 Your family's health matters</div>
+      </div>
+      <div class="rounded-3xl border border-blue-100 bg-white p-6 sm:p-8 soft-shadow">
+        <span class="text-xs font-bold uppercase tracking-[.18em] text-[#0877c9]">Customer feedback</span><h2 class="mt-2 text-2xl sm:text-3xl font-extrabold text-[#0b3b68]">People come first.</h2>
+        <div class="mt-7 rounded-2xl bg-[#f7fbfe] p-5">
+          <div class="flex items-center gap-3"><div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-2xl">🙂</div><div><p class="font-bold">A better way to order</p><p class="text-amber-500 tracking-widest">★★★★★</p></div></div>
+          <p class="mt-4 leading-7 text-slate-600">“Simple to use, convenient, and helpful when I need to order everyday health essentials.”</p>
+          <p class="mt-3 text-xs text-slate-400">Sample testimonial for design preview</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faqs" class="mx-auto max-w-4xl px-4 pb-16">
+      <div class="text-center mb-7"><h2 class="text-3xl font-extrabold text-[#0b3b68]">Frequently Asked Questions</h2></div>
+      <div class="space-y-3">
+        <details class="group rounded-xl border border-blue-100 bg-white p-4"><summary class="cursor-pointer font-bold">How do I order medicine?</summary><p class="mt-3 text-sm leading-6 text-slate-600">Search for a medicine or upload a prescription. The live website should then confirm availability, delivery details, and checkout.</p></details>
+        <details class="group rounded-xl border border-blue-100 bg-white p-4"><summary class="cursor-pointer font-bold">Can I pay by bKash, Nagad, Rocket, or card?</summary><p class="mt-3 text-sm leading-6 text-slate-600">This design displays those payment options. Real payments require a merchant account and integration with an approved payment gateway.</p></details>
+        <details class="group rounded-xl border border-blue-100 bg-white p-4"><summary class="cursor-pointer font-bold">Can I order prescription-only medicine?</summary><p class="mt-3 text-sm leading-6 text-slate-600">Prescription medicines must be reviewed and dispensed according to applicable Bangladesh laws and pharmacy requirements. Do not upload or share prescriptions on this demo page.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="support" class="brand-gradient text-white">
+    <div class="mx-auto max-w-7xl px-4 py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div><a href="#" class="flex items-center gap-2"><span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-[#0b3b68] text-2xl">✚</span><span class="text-2xl font-extrabold">MediCare</span></a><p class="mt-4 max-w-xs text-sm leading-6 text-blue-100">Your trusted online pharmacy concept. Your health, our priority.</p><div class="mt-4 flex gap-3 text-lg"><a href="#" aria-label="Facebook" class="hover:text-blue-200">ⓕ</a><a href="#" aria-label="YouTube" class="hover:text-blue-200">▶</a><a href="#" aria-label="LinkedIn" class="hover:text-blue-200">in</a></div></div>
+      <div><h3 class="font-extrabold">Quick Links</h3><ul class="mt-4 space-y-2 text-sm text-blue-100"><li><a class="hover:text-white" href="#">Home</a></li><li><a class="hover:text-white" href="#categories">Shop</a></li><li><a class="hover:text-white" href="#prescription">Upload Prescription</a></li><li><a class="hover:text-white" href="#why-us">About Us</a></li><li><a class="hover:text-white" href="#faqs">FAQs</a></li></ul></div>
+      <div><h3 class="font-extrabold">Support</h3><ul class="mt-4 space-y-3 text-sm text-blue-100"><li>☎ +880 1700 123456 <span class="text-xs">(demo)</span></li><li>✉ support@medicare.com <span class="text-xs">(demo)</span></li><li>◷ Sat – Thu: 8 AM – 10 PM <span class="text-xs">(sample)</span></li></ul></div>
+      <div><h3 class="font-extrabold">Health tips &amp; updates</h3><p class="mt-3 text-sm text-blue-100">Get occasional health tips and service updates.</p><form id="newsletterForm" class="mt-4 flex gap-2"><input id="newsletterEmail" type="email" required placeholder="Your email address" class="min-w-0 flex-1 rounded-xl bg-white px-3 py-3 text-sm text-slate-800 outline-none focus:ring-4 focus:ring-blue-300" /><button class="rounded-xl bg-[#dff1ff] px-4 font-bold text-[#0b3b68] hover:bg-white" type="submit" aria-label="Subscribe">➤</button></form><p id="newsletterMessage" class="mt-2 text-xs text-blue-100" role="status"></p></div>
+    </div>
+    <div class="border-t border-white/20"><div class="mx-auto max-w-7xl px-4 py-4 flex flex-col sm:flex-row justify-between gap-2 text-xs text-blue-100"><p>© 2026 MediCare. All rights reserved.</p><p>Secure Payments <span class="mx-2">|</span> Genuine Medicine <span class="mx-2">|</span> Better Health</p></div></div>
+  </footer>
+
+  <!-- Demo notice -->
+  <div id="toast" class="fixed bottom-5 left-1/2 z-50 hidden -translate-x-1/2 rounded-xl bg-[#0b3b68] px-5 py-3 text-sm font-semibold text-white shadow-xl" role="status"></div>
+
+  <script>
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.remove('hidden');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.add('hidden'), 3200);
+    }
+
+    document.getElementById('mobileSearchBtn').addEventListener('click', () => {
+      document.getElementById('search').scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => document.getElementById('medicineSearch').focus(), 450);
+    });
+
+    document.getElementById('searchForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const term = document.getElementById('medicineSearch').value.trim();
+      const message = document.getElementById('searchMessage');
+      message.classList.remove('hidden');
+      message.textContent = term
+        ? `Demo search: “${term}”. Connect a medicine catalogue and backend to show real products and availability.`
+        : 'Please enter a medicine name to search.';
+      if (term) document.getElementById('medicineSearch').focus();
+    });
+
+    document.getElementById('prescriptionFile').addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      const label = document.getElementById('fileName');
+      const message = document.getElementById('uploadMessage');
+      message.classList.add('hidden');
+      if (!file) { label.textContent = 'No file selected'; return; }
+      const allowed = ['image/jpeg', 'image/png', 'application/pdf'];
+      if (!allowed.includes(file.type)) {
+        event.target.value = '';
+        label.textContent = 'No file selected';
+        showToast('Please select a JPG, PNG, or PDF file.');
+        return;
+      }
+      if (file.size > 10 * 1024 * 1024) {
+        event.target.value = '';
+        label.textContent = 'No file selected';
+        showToast('File is larger than 10 MB. Please choose a smaller file.');
+        return;
+      }
+      label.textContent = file.name;
+    });
+
+    document.getElementById('prescription').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const file = document.getElementById('prescriptionFile').files[0];
+      const message = document.getElementById('uploadMessage');
+      message.classList.remove('hidden');
+      message.textContent = file
+        ? `Selected “${file.name}”. This demo does not upload files; connect a secure backend to enable prescription review.`
+        : 'Please choose a prescription file first.';
+    });
+
+    document.querySelectorAll('[data-category]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const category = button.dataset.category;
+        const message = document.getElementById('categoryMessage');
+        message.classList.remove('hidden');
+        message.textContent = `${category} selected. Connect your product catalogue to display available items in this category.`;
+      });
+    });
+
+    document.getElementById('cartBtn').addEventListener('click', () => {
+      showToast('Your cart is empty. Product and checkout features need a backend.');
+    });
+
+    document.getElementById('newsletterForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const email = document.getElementById('newsletterEmail');
+      document.getElementById('newsletterMessage').textContent = `Thanks! Newsletter signup for ${email.value} is a demo only.`;
+      email.value = '';
+    });
+  </script>
+</body>
+</html>
